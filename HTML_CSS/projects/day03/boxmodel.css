@@ -1,0 +1,193 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.bd{
+	border-top: 1px dashed black;
+	margin: 50px;
+}
+.bdm{
+	border-bottom: 1px dashed black;
+	margin: 50px;
+}
+
+.heading{
+	text-align: center;
+	margin: 5px;
+}
+
+.box1{
+  background: rgba(63, 191, 63, 0.2);
+  height: 100px;
+  width: 100px;
+  padding: 50px;
+  margin: 0 auto;
+  border: solid 5px black;
+  box-shadow:inset 0px 0px 0px 10px rgba(63, 191, 191, 0.75), 0px 0px 0px 10px rgba(239, 61, 94, 0.43);
+}
+.title{
+	text-align: center;
+	margin: 50px;
+}
+.text{
+	text-align: center;
+}
+.dot{
+	margin-top: 40px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+.content{
+	background-color: rgba(63, 191, 63, 0.2);
+}
+.padding{
+	background-color: rgba(63, 191, 191, 0.75);
+}
+.border{
+	background-color: black;
+}
+.margin{
+	background-color: rgba(239, 61, 94, 0.43);
+}
+
+.title2{
+	text-align: center;
+}
+.villain{
+	width: 620px;
+	height: 105px;
+	border: 1px solid black;
+	margin: 0px auto;	
+}
+.box{
+	margin: 2px;
+	box-sizing: border-box;
+}
+.box2{
+	height: 100px;
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+}
+.box3{
+	height: 100px;
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+}
+.box4{
+	height: 100px;
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+}
+.hero{
+	width: 620px;
+	height: 215px;
+	border: 1px solid black;
+	margin: 100px auto;
+}
+.box5{
+	height: 100px;
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+	border: 1px solid black;
+}
+.box6{
+	height: 100px;
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+	border: 1px solid black;
+}
+.box7{
+	height: 100px;
+	width: 200px;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+	border: 1px solid black;
+}
+	.proton{
+	width: 620px;
+	height: 105px;
+	border: 1px solid black;
+	margin: 0px auto;	
+}
+.boxx{
+	height: 100px;
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+	border: 1px solid black;
+}
+.boxy{
+	height: 100px;
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+	border: 1px solid black;
+}
+.boxz{
+	height: 100px;
+	width: 200px;
+	display: inline-block;
+	background-color: rgba(183, 183, 183, 0.68);
+	padding: 2px;
+	border: 1px solid black;
+}

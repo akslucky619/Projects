@@ -1,0 +1,88 @@
+.bloc-one{
+	height: 400px;
+	width: 15%;
+	background: grey;
+	float: left;
+	margin-left: 25%;
+	margin-top: 20px;
+	box-shadow: 5px 10px 5px #888888;
+}
+.margin{
+	padding-top: 20%;
+}
+.bloc-two{
+	height: 400px;
+	width: 15%;
+	background: grey;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	box-shadow: 5px 10px 5px #888888;
+}
+.bloc-three{
+	height: 400px;
+	width: 15%;
+	background: grey;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	/*clear: both;*/
+	box-shadow: 5px 10px 5px #888888;
+}
+.para{
+	clear: both;
+}
+.fix{
+	width: 70%;
+	padding-left: 30px;
+}
+.para{
+	margin-left: 20%;
+	padding-top: 40px;
+}
+.inline{
+	/*float: left;*/
+	/*margin: 0 10px;*/
+	display: inline-block;
+}
+.top{
+	background: red;
+	display: block;
+	padding: 10px;
+	color: white;
+	/*margin-left: 25%;*/
+}
+.text{
+	color: white;
+	margin-left: 50px;
+	/*padding-left: 50%;*/
+}
+
+.bgc {
+	 background-color: orange;
+	 padding-bottom: 20px;
+}
+.btm{
+	background: black;
+	display: block;
+	padding: 10px;
+	color: white;
+}
+.image{
+	list-style-type: circle;
+}
+
+/* Clearfix */
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+

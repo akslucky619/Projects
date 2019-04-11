@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todolist</title>
+    <link rel="stylesheet" href="todoist.css">
+  </head>
+  <body>
+    <form>
+      <label>
+        Task Name
+        <input id="new-task-input" type="text" placeholder="Your To do Tasks">
+      </label>
+      <button type="button" id="add-task-button">
+        Add Task
+      </button>
+    </form>
+    <ul id="todolist-container">
+    </ul>
+    
+    <script type="text/template" id="list-item-template">
+    <li class="task">
+      <label>
+        <input class="checkbox" type="checkbox">
+        <!-- TASK_NAME -->
+      </label>
+    </li>
+    </script>
+
+    <script src="todolist.js"></script>
+  </body>
+</html>

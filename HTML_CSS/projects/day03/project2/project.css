@@ -1,0 +1,134 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+.container{
+	width: 820px;
+	margin: 0px auto;
+}
+.box1{
+	background-color: red;
+	height: 200px;
+	width: 400px;
+	padding: 2px;
+	display: inline-block;
+}
+.box2{
+	background-color: rgba(38, 114, 38, 0.75);
+	height: 200px;
+	width: 200px;
+	padding: 2px;
+	display: inline-block; 
+}
+.box3{
+	background-color: rgba(134, 21, 187, 0.9);
+	height: 200px;
+	width: 200px;
+	padding: 2px;
+	display: inline-block;
+}
+.container2{
+	width: 820px;
+	margin: 5px auto;
+}
+.box4{
+	background-color: rgba(55, 138, 240, 0.68);
+	height: 200px;
+	width: 200px;
+	padding: 2px;
+	display: inline-block; 
+}
+.box5{
+	background-color: rgba(23, 170, 30, 0.68);
+	height: 200px;
+	width: 400px;
+	padding: 2px;
+	display: inline-block;
+}
+.box6{
+	background-color: rgba(87, 239, 94, 0.68);
+	height: 200px;
+	width: 200px;
+	padding: 2px;
+	display: inline-block;
+}
+.container3{
+	width: 820px;
+	margin: 5px auto;
+}
+.box7{
+	background-color: rgba(231, 239, 87, 0.68); 
+	height: 200px;
+	width: 200px;
+	padding: 2px;
+	display: inline-block;
+}
+.box8{
+	background-color: orange;
+	height: 200px;
+	width: 200px;
+	padding: 2px;
+	display: inline-block;
+}
+.box9{
+	background-color: red;
+	height: 200px;
+	width: 400px;
+	padding: 2px;
+	display: inline-block;
+
+}
+.text{
+	color: white;
+	margin-left: 5px;t
+	font-size: 10px;
+}

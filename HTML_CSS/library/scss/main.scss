@@ -1,0 +1,238 @@
+
+@import 'reset';
+// @import 'index';
+
+
+// ::root{
+// 	b
+// }
+
+.text{
+	p, a, em, small, strong, u, h1, h2, h3, h4, h5, h6{
+	text-align: center;
+	}
+}
+h4{
+	font-size: 2.5rem;
+}
+p{
+	font-size: 2rem;
+}
+h1{
+	font-size: 4rem;
+}
+h2{
+	font-size: 3.5rem;
+}
+h3{
+	font-size: 3rem;
+}
+h5{
+	font-size: 2rem
+}
+h6{
+	font-size: 1.5rem
+}
+// // .grid-box{
+// //     display: grid;
+// //     grid-template-columns: auto auto auto auto;
+// //     border: 2px solid;
+// //     padding: 20px;
+// //     justify-content: space-around;
+// //     background-color: rgba(136, 90, 250, 0.6);
+// //     // width: auto;
+//  }
+ .image{
+ 	height: 10rem;
+ 	width: 8rem;
+ 	border-radius: 50%;
+ }
+ // .grid-item{
+ // 	background-color: pink;
+ // }
+ button{
+ font-size: 25px;
+ padding: 10px 25px;
+ text-decoration: none;
+}
+.btn1:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: 2px solid red;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn2{
+	// background-color:
+	background-color: #f44336;
+  color: white;
+}
+.btn2{
+	 border-radius: 10px;
+}
+.btn3{
+	background-color: DodgerBlue;
+  border: none;
+  color: white;
+  // padding: 12px 16px;
+  // font-size: 16px;
+  cursor: pointer;
+}
+.btn3:hover{
+  background-color: RoyalBlue;
+}
+.btn4{
+	border: 2px dashed #ff9800;
+  background-color: rgba(90, 200, 250, 0.4);
+  color: black;
+  // padding: 14px 28px;
+  // font-size: 16px;
+  cursor: pointer;
+}
+
+// BLOCKQUOTE
+
+blockquote{
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  margin: 20px 0 20px;
+  position: relative;
+  float: right;
+  
+  /*Borders - (Optional)*/
+  border-left: 15px solid #c76c0c;
+  border-right: 2px solid #c76c0c;
+  
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}
+
+// FORMS
+
+input{
+	width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+  width: 100%;
+  background-color: #3CBC8D;
+  color: white;
+}
+
+// TABLE
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  // float: right;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+// grids
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: pink;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.margin{
+	margin-top: 30px;
+}
+img{
+	border-radius: 50%;
+}
+h3{
+	text-align:center;
+}
+
+// SNIPPET
+
+// * {box-sizing: border-box}
+
+// .container {
+//   width: 100%;
+//   background-color: #ddd;
+// }
+
+// .skills {
+//   text-align: right;
+//   padding: 10px;
+//   color: white;
+// }
+
+// .html {width: 90%; background-color: #4CAF50;}
+// .css {width: 80%; background-color: #2196F3;}
+// .js {width: 65%; background-color: #f44336;}
+// .php {width: 60%; background-color: #808080;}
+// }
+// responsive
+
+// @media all and (min-width:768px){
+// 	.grid-container: repeat(1fr);
+

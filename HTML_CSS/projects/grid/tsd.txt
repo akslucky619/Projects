@@ -1,0 +1,28 @@
+body
+	main
+		div
+			div div
+		div
+		div
+	/
+/body
+
+
+CSS
+---
+*, *:after, *:before {
+ 	msring;
+}
+
+body > main > div > div {
+padding: 20 px;
+}
+
+footer > p {
+	
+}
+
+main  div {
+padding: 20 px;
+}
+

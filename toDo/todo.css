@@ -1,0 +1,132 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.butt {
+    border: none;
+}
+
+
+
+body{
+    /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    background: #f5f5f5;
+    font-family: 'Fascinate Inline', cursive;
+}
+
+.container {
+    /* background: rgb(255, 210, 229); */
+    /* display: flexbox */
+    width: 400px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.003);
+    /* text-align: center; */
+  }
+  span {
+    color: brown;
+  }
+  .mylist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid rgb(151, 144, 144);
+    /* border-bottom: 2px dashed black; */
+  }
+  input[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+  }
+  button{
+      /* display: flex; */
+      /* justify-content: space-between; */
+  }
+  h1{
+      display: block;
+      color: rgba(187, 59, 59, 0.15);
+      font-size: 130px;
+  }
+  .inputval{
+    padding: 16px 16px 16px 60px;
+    border: none;
+    /* background: rgba(0, 0, 0, 0.003); */
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+    width: 90.5%;
+    background:rgba(0, 0, 0, 0.003);
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+.lists{
+    /* display: flex;
+    justify-content: space-between; */
+    background: rgb(251, 252, 249);
+}
+p{
+    color: rgb(231, 108, 129);
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.butt{
+    background: transparent;
+    height: 40px;
+    width: 70px;
+    /* display: none; */
+}
+.to-do{
+    background: red;
+}
+.check{
+    background: transparent;
+    height: 40px;
+    width: 70px;
+    border: none;
+}
+  

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todolist</title>
+  </head>
+  <body>
+    <form>
+      <label>
+        Task Name:
+        <input id="new-task-input" type="text" placeholder="Pick up milk">
+      </label>
+      <button type="button" id="add-task-button">
+        Add Task
+      </button>
+    </form>
+    <ul id="todolist-container">
+    </ul>
+    
+    <script type="text/template" id="list-item-template">
+    <li>
+      <label>
+        <input type="checkbox">
+        <!-- TASK_NAME -->
+      </label>
+    </li>
+    </script>
+    
+    <script>
+    var addTaskButton = document.getElementById("add-task-button");
+    var newTaskInput = document.getElementById("new-task-input");
+    var todolistContainer = document.getElementById("todolist-container");
+    var templateElement = document.getElementById("list-item-template");
+    var template = templateElement.innerText;
+
+    addTaskButton.addEventListener('click', function(event) {
+      var taskName = newTaskInput.value;
+      newTaskInput.value = "";
+
+      var taskHTML = template.replace("<!-- TASK_NAME -->", taskName);
+      todolistContainer.insertAdjacentHTML('afterbegin', taskHTML);
+    });
+    </script>
+  </body>
+</html>

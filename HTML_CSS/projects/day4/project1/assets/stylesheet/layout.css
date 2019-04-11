@@ -1,0 +1,57 @@
+.float_left{
+	float: left;
+	margin-right: 5px;
+}
+.float_right{
+	float: right;
+}
+.resize{
+	height: 100px;
+	width: 100px;
+}
+.box1{
+  height: 110px;
+  background: pink;
+  padding: 20px;
+  box-shadow: 0px 0px 0px 20px orange;
+  border: 4px solid #FF4136;
+}
+hr {
+	margin-top: 150px;
+	clear: both;
+
+}
+.hero{
+	padding: 20px;
+	box-shadow: inset 0px 0px 0px 20px orange;
+	border: 4px solid #FF4136;
+}
+.line{
+	height: 110px;
+	width: 100%;
+	background-color: lightblue;
+	margin-bottom: 5px;
+	float: left;
+}
+.square{
+	height: 80px;
+	width: 100px;
+	background-color: lightblue;
+	float: left;
+	margin: 5px;
+}
+.clear{
+	float: none;
+	clear:both;
+	margin-left: 29px;
+}
+.box2{
+  padding: 20px;
+	box-shadow: inset 0px 0px 0px 20px orange;
+	border: 4px solid #FF4136;
+	float: left;
+	background-color: pink;
+}
+.fix{
+	
+}
