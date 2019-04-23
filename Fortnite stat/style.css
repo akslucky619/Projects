@@ -1,0 +1,27 @@
+.box1{
+    text-align: center;
+    box-sizing: border-box;
+    background: #1e3aa082;
+    width: 40%;
+}
+h1{
+    font-size: 5rem;
+    color: white;
+}
+input{
+    height: 3rem;
+    width: 25rem;
+    text-align: center;
+    font-size: 2rem;
+}
+h4{
+    font-size: 3rem;
+    color: whitesmoke;
+}
+body{
+    background: #2196f3;
+}
+p{
+    font-size: 2rem;
+    color: aliceblue;
+}
