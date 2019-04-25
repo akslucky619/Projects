@@ -12,5 +12,8 @@ class UI {
 
         <td>${book.title}</td>
         <td>${book.author}</td>
+        <td><a href="" class="delete">X</a></td>
+
+        list.appendChild(row);
     }
 }
