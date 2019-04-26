@@ -10,7 +10,7 @@ function handleClick(event){
 }
 function displayTodo(todos) {
   ul.innerHTML = "";
-  todos.forEach((todo,i) =https://www.youtube.com/watch?v=xkzDaKwinA8> {
+  todos.forEach((todo,i) => {
     const li = document.createElement('li');
     li.setAttribute('data-id', i);
     li.classList.add("mylist");

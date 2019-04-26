@@ -5,16 +5,32 @@ var e = new events.EventEmitter();
 
 var cli = {};
 
+var help = {
+    'date':'This is date menu',
+    'help': 'This is help menu',
+    'exit': 'This is exit menu',
+}
+
 e.on('date', (val)=>{
-  // console.log(new Date())
+  console.log(new Date())
 });
 
 e.on('exit', (val)=>{
-  // console.log(new Date())
+  process.exit(0);
 });
 
 e.on('help', (val)=>{
-  console.log("help on the way")
+  for (let key in help) {
+		var line = '';
+		line = key;
+		var padding = 42 - key.length;
+		for(let i = 0; i <= padding; i++) {
+			line += ' ';
+		}
+		line +=help[key];
+		console.log(line);
+	}
+  console.log(line)
 });
 
 
@@ -28,6 +44,7 @@ cli.init = () => {
     cli.processInput(str);
   })
 };
+
 cli.processInput = (str)=>{
   var uniqueInput = ['exit', 'date', 'help'];
   uniqueInput.some(input =>{
@@ -36,7 +53,7 @@ cli.processInput = (str)=>{
       console.log(input, str);
       e.emit(input, str);
       // e.on('date', (str)=>{
-      //   console.log("new date");
+      //   console.log(new Date());
       // })
     }
   })
