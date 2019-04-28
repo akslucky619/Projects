@@ -9,15 +9,14 @@ HTML:
 </head>
 <body>
     <div class="container">
-        <div id="inputdiv">
-            <input id="input" type="text" placeholder="type input...">
-            <button type="submit" id="btn" method="POST" url="/users">Submit</button>
-        </div>
-        <div id="listDiv">
+        <form  method="post" action="/">
+            <input type="text" placeholder="type input..." name="todos">
+            <button type="submit" id="btn">Submit</button>
+        </form>
+        <!-- <div id="listDiv">
             <ul id="ul"></ul>
-        </div>
+        </div> -->
        <!-- <script src="main.js"></script> -->
-       <a href='/create'>Link</a>
     </div>
 </body>
 </html>
