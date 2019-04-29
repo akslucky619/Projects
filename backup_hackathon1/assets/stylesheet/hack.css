@@ -1,0 +1,118 @@
+body{
+    background-image: url("...assets/media/ipl.jpg");
+    font-family: 'Anton', sans-serif;
+    background-size: stretch;
+}
+p{
+    font-size: 60px;
+    color: rgba(82, 255, 87, 0.98);
+    text-align: center;
+    text-shadow: 2px 0 0 black;
+    background-color: 
+}
+.container{
+/* justify-items: center; */
+text-align: center;
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 15%;
+}
+.para{
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    margin-top: 2%;
+}
+.buttons{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    /* border: none; */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 15px;
+    /* font-weight: bolder; */
+    font-family: 'Anton', sans-serif;
+
+}
+.second{
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+input{
+    height: 50px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+#csk{
+    background-color: yellow;
+}
+#csk:hover{
+    background-color: rgb(255, 255, 159);
+}
+#mi{
+    background-color: blue;
+    color: white;
+}
+#mi:hover{
+    background-color: rgb(116, 116, 240);
+}
+#kkr{
+    background-color: purple;
+    color: white;
+}
+#kkr:hover{
+    background-color: rgb(161, 87, 161);
+}
+#srh{
+    background-color: orange
+}
+#srh:hover{
+    background-color: rgb(240, 203, 136);
+}
+#kxip{
+    background-color: rgb(179, 72, 122);
+    color: white;
+}
+#kxip:hover{
+    background-color: rgb(235, 133, 181);
+}
+#dc{
+    background-color:rgb(94, 94, 192);
+    color: white;
+}
+#dc:hover{
+    background-color:rgb(166, 166, 235);
+}
+#rr{
+    background-color: rgb(221, 59, 226);
+    color: white;
+}
+#rr:hover{
+    background-color: rgb(246, 138, 250);
+}
+#rcb{
+    background-color: rgb(221, 52, 61);
+    color: white;
+}
+#rcb:hover{
+    background-color: rgb(243, 126, 132);
+}
+.calc{
+    width: 200px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #193889;
+}
