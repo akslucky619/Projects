@@ -18,32 +18,32 @@ http.createServer((req, res) => {
            res.end();
        } )
    }
-//    if(req.url === '/style.css') {
+   if(req.url === '/style.css') {
 
-//        fs.readFile('./style.css', (err, file) => {
-//            if(err) {
-//                res.write('page not found');
-//            } else {
-//                res.writeHead(200, {'Content-Type': 'text/css'});
-//                res.write(file);
-//            }
-//            res.end()
-//            })
-//        }
+       fs.readFile('./style.css', (err, file) => {
+           if(err) {
+               res.write('page not found');
+           } else {
+               res.writeHead(200, {'Content-Type': 'text/css'});
+               res.write(file);
+           }
+           res.end()
+           })
+       }
 
-//    if(req.url === '/main.js') {
+   if(req.url === '/main.js') {
 
-//        fs.readFile('./main.js', (err, file) => {
-//            if(err) {
-//                res.write('page not found');
-//            } else {
-//                 res.writeHead(200, {'Content-Type': 'text/js'});
-//                 res.write(file);
-//            }
-//            res.end()
-//            })
+       fs.readFile('./main.js', (err, file) => {
+           if(err) {
+               res.write('page not found');
+           } else {
+                res.writeHead(200, {'Content-Type': 'text/js'});
+                res.write(file);
+           }
+           res.end()
+           })
 
-//    }
+   }
    if (req.method === "POST" && req.url === "/"){
     var store = '';
     req.on('data', (chunk) => {
