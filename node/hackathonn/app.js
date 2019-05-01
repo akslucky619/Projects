@@ -85,7 +85,7 @@ var server = http.createServer((req, res) => {
             console.log(store, conn);
             var hack = queryString.parse(store);
             
-            collection = conn.db('myDb').collection("hack");
+            collecnpm tion = conn.db('myDb').collection("hack");
             collection.insert({name:hack.name, email:hack.email, password:hack.password});
 
             res.end()
@@ -94,3 +94,15 @@ var server = http.createServer((req, res) => {
  }).listen(4000, () => {
     console.log(chalk.red('Server running on port') + ' 4000' + chalk.red('!'));;
  })
+
+
+ function isTriangle(a,b,c) {
+     while (a !== 0 && b !== 0 && c !==0) {
+        if(a+b > c || b+c > a || a+c > b){
+            return true;
+            }
+            else{
+              return false;
+            }
+     }
+ }

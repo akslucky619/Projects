@@ -31,6 +31,7 @@ var server = http.createServer((req, res) => {
                 else {
                     line += data.toString();
                     line += "<br><br>"
+
                     dataitems.forEach(elm => {
                         var fileContent = fs.readFileSync(usersDir + elm)
                         line += JSON.stringify(JSON.parse(fileContent));
