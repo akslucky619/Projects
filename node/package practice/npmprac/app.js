@@ -1,15 +1,29 @@
 var express = require("express");
 var path = require("path")
 var app = express();
-var userDir = path.join(__dirname, "public")
+var userDir = path.join(__dirname, "public");
+var cookieParser = require('cookie-parser');
+
+
+
+
+app.use(cookieParser());
+
+app.use((req, res, next)=>{
+    res.cookie("name", "akash");
+    next();
+})
 
 app.use((req, res, next)=>{
     console.log(req.url)
     next();
 })
 
+app.set("views", path.join(__dirname, "views"))
+app.set("view engine", "ejs");
+
 app.get('/',(req,res)=>{
-    res.sendFile(userDir+'/grid.html');
+    res.render("grid");
   });
 
 app.use(express.json());
