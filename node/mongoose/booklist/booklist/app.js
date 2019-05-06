@@ -4,9 +4,20 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+
+mongoose.connect("mongodb://localhost/bookData", {useNewUrlParser : true}, (err) => {
+  err ? console.log('not connected') : console.log('connected')
+})
+
+require('./models/book')
+
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var booksRouter = require('./routes/books');
+var authorRouter = require('./routes/authors');
 
 var app = express();
 
@@ -21,8 +32,10 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/books', booksRouter);
+app.use('/authors', authorRouter);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
