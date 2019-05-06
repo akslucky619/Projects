@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>booksList</title>
+</head>
+<body>
+    <% bookitems.forEach(book => {%>
+        <div class="book-list">
+            <a href="/books/<%= book._id %>">
+                <h3><%= book.title %></h3>
+            </a>
+            <h5><%= book.description %></h5>
+        </div>
+             
+    <%}) %>
+</body>
+</html>
