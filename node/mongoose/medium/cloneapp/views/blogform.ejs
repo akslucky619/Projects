@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<% include partials/header %>
+<h3><%= user.name %></h3>
+<body>
+    <form method="POST" action="/blogs/new">
+        <input type="text" placeholder="enter title" name="title">
+        <input type="text" placeholder="description" name="description">
+        <input type="hidden" name="user" value="<%= user._id %>">
+        <textarea name="content"></textarea>
+        <input type="text" placeholder="tags" name="tags">
+        <button type="submit">submit</button>
+    </form>
+    <% include partials/footer %>
+</body>
+</html>

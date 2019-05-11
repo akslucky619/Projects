@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var session = require('express-session')
+var Mongostore = require('connect-mongo')(session);
 
 
 mongoose.connect("mongodb://localhost/bookData", {useNewUrlParser : true}, (err) => {
@@ -31,6 +33,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+    secret: 'its a secret',
+    resave: false,
+    saveUninitialized: true,
+    store: new Mongostore({mongooseConnection: mongoose.connection})
+}))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

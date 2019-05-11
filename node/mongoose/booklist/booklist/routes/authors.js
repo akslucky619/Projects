@@ -2,63 +2,20 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose')
 var Author = require('../models/author');
+var authorController = require('../controllers/authorControllers');
 
-router.get('/', function(req, res) {
-    Author.find({}).populate('books').exec((err, authorlist) => {
-        if(err) return next(err);
-        res.render('authordisplay', {allauthors: authorlist})
-    })
-  });
+router.get('/', authorController.authorDisplay);
 
-// get author listing
-// router.get('/', function (req,res,next) {
-    
-//     Author.find({}, (err, authorlist)=>{
-//         if(err) return next(err);
-//         res.render()
-//     })
-// })
+router.get('/new', authorController.authorForm);
 
-router.get('/new', function (req, res) {
-    res.render('authorsform');
-})
+router.post('/new', authorController.authorCreate);
 
-router.post('/new', function (req, res, next) {
-    Author.create(req.body, (err,result)=>{
-        if(err) return next(err);
-        res.redirect('/authors');
-    })
-});
+router.get('/:id', authorController.authorDetails);
 
-router.get('/:id', (req, res, next) => {
-    var id = req.params.id;
-    Author.findById(id, (err, author) => {
-        if(err) return next(err);
-        res.render('authorDetails', {author: author}); 
-    })
-})
+router.get('/:id/edit', authorController.authorEdit);
 
-router.get('/:id/edit', (req, res, next) => {
-    Author.findById(req.params.id, (err, author) => {
-        if(err) return next(err);
-        res.render('editform', {author: author})
-    })
-})
+router.post('/:id/update',authorController.authorUpdate);
 
-router.post('/:id/update', (req, res, next) => {
-    var id = req.params.id;
-    Author.findByIdAndUpdate(id, req.body, {new: true}, (err, author) => {
-        if(err) return next(err);
-        res.redirect("/authors/" + author._id)
-    })
-})
-
-router.get('/:id/delete', (req, res, next)=>{
-    var id = req.params.id;
-    Author.findByIdAndDelete(id, (err)=>{
-        if(err) return next(err);
-        res.redirect('/authors')
-    })
-})
+router.get('/:id/delete', authorController.authorDelete);
 
 module.exports = router;

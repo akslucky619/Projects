@@ -2,25 +2,18 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var Users = require('../models/userdata');
+var session = require('express-session');
+var userController = require('../controllers/userControllers');
 
-router.get('/', function(req, res) {
-  Users.find({}, (err, userlist) => {
-      if(err) return next(err);
-      res.render('usersdisplay', {allusers: userlist})
-  })
-});
+router.get('/', userController.userDisplay);
 
+router.get('/login',userController.loginForm);
 
-router.get('/new', function (req, res) {
-    res.render('userform')
-})
+router.post('/login',userController.loginForm)
 
-router.post('/new', function (req, res, next) {
-  Users.create(req.body, (err=>{
-    if(err) return next(err);
-    res.redirect('/users');
-  }))
-})
+router.get('/new', userController.userForm)
+
+router.post('/new',userController.userCreate)
 
 // router.get('/:id',(req, res, next)=>{
 //   var id = req.params.id;
@@ -30,14 +23,8 @@ router.post('/new', function (req, res, next) {
 //   })
 // })
 
-router.get('/:id/delete', (req, res, next)=>{
-  var id = req.params.id;
-  Users.findByIdAndDelete(id, (err)=>{
-      if(err) return next(err);
-      res.redirect('/users')
-  })
-})
+router.get('/:id/delete', userController.userDelete);
 
 // router.get('')
 
-module.exports = router;
+module.exports = router;ss

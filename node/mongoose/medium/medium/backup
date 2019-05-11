@@ -1,0 +1,9 @@
+var Blog = require('../models/blog');
+
+exports.blogForm = (req, res) =>{
+    res.render('blogform')
+}
+
+router.get('/new', (req, res) =>{
+    res.render('blogform')
+})

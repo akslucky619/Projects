@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>booksList</title>
+</head>
+<body>
+        <% include partials/header %>
+        <header>
+    <a href="/users/logout"><button>logout</button></a>
+    <a href="/users/bloguser"><button>My Blogs</button></a>
+        </header>
+    <% blogitems.forEach(blog => {%>
+        <div class="blog-list">
+            <a href="/blogs/<%= blog._id %>">
+                <h3><%= blog.title %></h3>
+            </a>
+            <!-- <h5><%= blog.description %></h5>
+            <h5><%= blog.content %></h5>
+            <h5><%= blog.tags %></h5> -->
+        </div>
+             
+    <%}) %>
+    <% include partials/footer %>
+</body>
+</html>

@@ -1,0 +1,36 @@
+var Author = require('../models/author');
+
+exports.authorDisplay = function(req, res) {
+    Author.find({}).populate('books').exec((err, authorlist) => {
+        if(err) return next(err);
+        res.render('authordisplay', {allauthors: authorlist})
+    })
+  };
+
+  exports.authorForm = function (req, res) {
+    res.render('authorsform');
+};
+
+exports.authorCreate = function (req, res, next) {
+    Author.create(req.body, (err,result)=>{
+        if(err) return next(err);
+        res.redirect('/authors');
+    })
+};
+
+exports.authorDetails = (req, res, next) => {
+    var id = req.params.id;
+    Author.findById(id, (err, author) => {
+        if(err) return next(err);
+        res.render('authorDetails', {author: author}); 
+    })
+};
+
+
+outer.get('/', authorController.authorDisplay);
+
+router.get('/new', authorController.authorForm)
+
+router.post('/new', authorController.authorCreate);
+
+router.get('/:id', authorController.authorDetails)

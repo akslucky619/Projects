@@ -3,71 +3,26 @@ var router = express.Router();
 var mongoose = require('mongoose')
 var Book = require('../models/book')
 var Author = require("../models/author")
+var session = require('express-session')
+var bookController = require('../controllers/bookControllers')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-    
-    Book.find({}).populate('author').exec((err, fullbooklist) => {
-        if(err) return next(err);
-        res.render('booksdisplay', {bookitems: fullbooklist})
-    })
-});
+router.get('/', bookController.bookdisplay)
 
-router.get('/new', function(req, res, next) {
-    
-    Author.find({}).populate('author').exec((err, authorlist) => {
-        if(err) return next(err);
-        res.render('booksform', {authoritems: authorlist})
-    })
-});
+router.get('/new', bookController.bookForm)
 
-// router.get('/new', function(req, res) {
-//     res.render('booksform');
-//   });
+router.post('/new', bookController.bookCreate)
 
-router.post('/new', function(req, res, next) {
-  console.log(req.body);
-  var tags = req.body.tags.split(',');
-  req.body.tags = tags;
-  Book.create(req.body, (err, result) => {
-      if (err) return next(err);
-      res.redirect('/books');
-  })
-});
-
-router.get('/:id', (req, res, next) => {
-    var id = req.params.id;
-    Book.findById(id, (err, book) => {
-        if(err) return next(err);
-        res.render('details', {book: book}); 
-    })
-})
+router.get('/:id', bookController.bookDetails)
 
 
 
-router.get('/:id/edit', (req, res, next) => {
-    Book.findById(req.params.id, (err, book) => {
-        if(err) return next(err);
-        res.render('editForm', {book: book})
-    })
-})
+router.get('/:id/edit', bookController.bookEdit)
 
 
-router.post('/:id/update', (req, res, next) => {
-    var id = req.params.id;
-    Book.findByIdAndUpdate(id, req.body, {new: true}, (err, book) => {
-        if(err) return next(err);
-        res.redirect("/books/" + book._id)
-    })
-})
+router.post('/:id/update', bookController.bookUpdate)
 
-router.get('/:id/delete', (req, res, next)=>{
-    var id = req.params.id;
-    Book.findByIdAndDelete(id, (err)=>{
-        if(err) return next(err);
-        res.redirect('/books')
-    })
-})
+router.get('/:id/delete', bookController.bookDelete)
 
 module.exports = router;
 

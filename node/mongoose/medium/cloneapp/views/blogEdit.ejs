@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <% include partials/header %>
+    <form method="POST" action="/blogs/<%= blog._id %>/update">
+        <input type="text" placeholder="enter title" name="title" value="<%= blog.title %>">
+        <input type="text" placeholder="description" name="description" value="<%= blog.description %>">
+        <textarea name="content"></textarea>
+        <input type="text" placeholder="tags" name="tags" value="<%= blog.tags %>">
+        <button type="submit">submit</button>
+    </form>
+    <% include partials/footer %>
+</body>
+</html>
