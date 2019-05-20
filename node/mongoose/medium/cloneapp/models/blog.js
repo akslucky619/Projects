@@ -12,7 +12,9 @@ var blogSchema = new Schema({
     user:{
         type: Schema.Types.ObjectId,
         ref: 'Users'
-    }
+    },
+    Comments: [{type: Schema.Types.ObjectId, ref:'CommentPost'}],
+    author: {type: Schema.Types.ObjectId, ref:'Users', required: true}
 }, {timestamps: true});
 
 var Blog = mongoose.model('Blog', blogSchema)

@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var Mongostore = require('connect-mongo')(session)
 var authorcontroller = require('./controllers/authcontroller')
+var passport = require('./config/passport')
 
 mongoose.connect("mongodb://localhost/blogsdata", {useNewUrlParser : true}, (err) => {
   err ? console.log('not connected') : console.log('connected')

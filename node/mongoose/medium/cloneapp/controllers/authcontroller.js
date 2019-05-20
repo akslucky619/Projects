@@ -25,3 +25,9 @@ exports.userSession = (req, res, next)=>{
         next()
     }
 }
+
+module.exports = {
+    addUser: (req, res) => {
+        console.log(req.body, 'checking req');
+    }
+}
