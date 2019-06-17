@@ -4,9 +4,9 @@ var router = express.Router();
 var Blog = require('../models/blog');
 var authcontroller = require('../controllers/authcontroller')
 
-router.get('/new', authcontroller.isUserLogged, (req, res) =>{
-    res.render('blogform')
-})
+// router.get('/new', authcontroller.isUserLogged, (req, res) =>{
+//     res.render('blogform')
+// })
 
 router.post('/new', (req, res, next)=>{
     var tags = req.body.tags.split(',');
@@ -44,6 +44,7 @@ router.get('/:id/edit',(req, res, next)=>{
     Blog.findById(req.params.id, (err, blog)=>{
         if(err) return next(err);
         if(req.user && blog.user.equals(req.user._id)){
+            console.log(req.user && blog.user.equals(req.user._id))
         res.render('blogEdit', {blog: blog})
     }
     else{

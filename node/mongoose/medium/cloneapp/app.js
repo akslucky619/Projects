@@ -39,7 +39,7 @@ app.use(session({
     store: new Mongostore({mongooseConnection: mongoose.connection})
 }))
 
-app.use(authorcontroller.userSession);
+// app.use(authorcontroller.userSession);
 
 app.use('/', routes);
 app.use('/users', users);
